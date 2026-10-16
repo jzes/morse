@@ -1,110 +1,106 @@
 package alphabet
 
-type CodeNode struct {
-	Key  string
-	Dot  *CodeNode
-	Dash *CodeNode
-}
+import "github.com/jzes/morse/decoder"
 
-var RootNode = CodeNode{
+var RootNode = decoder.CodeNode{
 	Key:  "",
 	Dot:  &ENode,
 	Dash: &TNode,
 }
 
 // Nível 1
-var ENode = CodeNode{
+var ENode = decoder.CodeNode{
 	Key:  "e",
 	Dot:  &INode,
 	Dash: &ANode,
 }
 
-var TNode = CodeNode{
+var TNode = decoder.CodeNode{
 	Key:  "t",
 	Dot:  &NNode,
 	Dash: &MNode,
 }
 
 // Nível 2
-var INode = CodeNode{
+var INode = decoder.CodeNode{
 	Key:  "i",
 	Dot:  &SNode,
 	Dash: &UNode,
 }
 
-var ANode = CodeNode{
+var ANode = decoder.CodeNode{
 	Key:  "a",
 	Dot:  &RNode,
 	Dash: &WNode,
 }
 
-var NNode = CodeNode{
+var NNode = decoder.CodeNode{
 	Key:  "n",
 	Dot:  &DNode,
 	Dash: &KNode,
 }
 
-var MNode = CodeNode{
+var MNode = decoder.CodeNode{
 	Key:  "m",
 	Dot:  &GNode,
 	Dash: &ONode,
 }
 
 // Nível 3
-var SNode = CodeNode{
+var SNode = decoder.CodeNode{
 	Key:  "s",
 	Dot:  &HNode,
 	Dash: &VNode,
 }
 
-var UNode = CodeNode{
+var UNode = decoder.CodeNode{
 	Key: "u",
 	Dot: &FNode,
 }
 
-var RNode = CodeNode{
+var RNode = decoder.CodeNode{
 	Key: "r",
 	Dot: &LNode,
 }
 
-var WNode = CodeNode{
+var WNode = decoder.CodeNode{
 	Key:  "w",
 	Dot:  &PNode,
 	Dash: &JNode,
 }
 
-var DNode = CodeNode{
+var DNode = decoder.CodeNode{
 	Key:  "d",
 	Dot:  &BNode,
 	Dash: &XNode,
 }
 
-var KNode = CodeNode{
+var KNode = decoder.CodeNode{
 	Key:  "k",
 	Dot:  &CNode,
 	Dash: &YNode,
 }
 
-var GNode = CodeNode{
+var GNode = decoder.CodeNode{
 	Key:  "g",
 	Dot:  &ZNode,
 	Dash: &QNode,
 }
 
-var ONode = CodeNode{
+var ONode = decoder.CodeNode{
 	Key: "o",
 }
 
 // Nível 4 (folhas)
-var HNode = CodeNode{Key: "h"}
-var VNode = CodeNode{Key: "v"}
-var FNode = CodeNode{Key: "f"}
-var LNode = CodeNode{Key: "l"}
-var PNode = CodeNode{Key: "p"}
-var JNode = CodeNode{Key: "j"}
-var BNode = CodeNode{Key: "b"}
-var XNode = CodeNode{Key: "x"}
-var CNode = CodeNode{Key: "c"}
-var YNode = CodeNode{Key: "y"}
-var ZNode = CodeNode{Key: "z"}
-var QNode = CodeNode{Key: "q"}
+var HNode = decoder.CodeNode{Key: "h"}
+var VNode = decoder.CodeNode{Key: "v"}
+var FNode = decoder.CodeNode{Key: "f"}
+var LNode = decoder.CodeNode{Key: "l"}
+var PNode = decoder.CodeNode{Key: "p"}
+var JNode = decoder.CodeNode{Key: "j"}
+var BNode = decoder.CodeNode{Key: "b"}
+var XNode = decoder.CodeNode{Key: "x"}
+var CNode = decoder.CodeNode{Key: "c"}
+var YNode = decoder.CodeNode{Key: "y"}
+var ZNode = decoder.CodeNode{Key: "z"}
+var QNode = decoder.CodeNode{Key: "q"}
