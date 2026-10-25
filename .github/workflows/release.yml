@@ -39,11 +39,11 @@ jobs:
             binary=morse.exe
           fi
           go build -trimpath -ldflags='-s -w' -o "package/$binary" .
-          cp README.md package/
+          cp README.md LICENSE package/
           if [ "$GOOS" = windows ]; then
-            (cd package && zip "../dist/$name.zip" "$binary" README.md)
+            (cd package && zip "../dist/$name.zip" "$binary" README.md LICENSE)
           else
-            tar -czf "dist/$name.tar.gz" -C package "$binary" README.md
+            tar -czf "dist/$name.tar.gz" -C package "$binary" README.md LICENSE
           fi
       - uses: actions/upload-artifact@v4
         with:

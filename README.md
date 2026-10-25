@@ -21,6 +21,15 @@ A resposta aqui é uma árvore: cada ponto segue para um lado, cada traço para 
 
 ## 🚀 Instalação
 
+### Homebrew (macOS e Linux)
+
+```sh
+brew install jzes/tap/morse
+morse '... --- ...'
+```
+
+O [tap oficial do projeto](https://github.com/jzes/homebrew-tap) instala os binários publicados nas releases, com verificação SHA-256. Há suporte a macOS e Linux, em `amd64` e `arm64`, sem precisar instalar Go.
+
 ### Baixar um binário
 
 Na [página de releases](https://github.com/jzes/morse/releases), baixe o arquivo correspondente ao seu sistema e arquitetura e extraia seu conteúdo:
@@ -160,10 +169,16 @@ Troque `v0.1.0` pela próxima versão, seguindo `vMAJOR.MINOR.PATCH`. O workflow
 
 1. Executa as mesmas verificações do CI.
 2. Compila para Linux, macOS e Windows, em `amd64` e `arm64`.
-3. Empacota os executáveis com este README e gera checksums SHA-256.
+3. Empacota os executáveis com este README e a licença MIT e gera checksums SHA-256.
 4. Publica uma GitHub Release com notas geradas automaticamente e os arquivos para download.
 
 Tags como `v0.2.0-rc.1` geram uma **pré-release**. A versão é escolhida na tag; não há incremento automático. A publicação usa o `GITHUB_TOKEN` fornecido pelo Actions, sem precisar cadastrar um token pessoal.
+
+Após publicar uma versão estável, atualize a versão, as URLs e os checksums da fórmula `Formula/morse.rb` no [repositório do tap](https://github.com/jzes/homebrew-tap). A atualização do tap é manual.
+
+## 📄 Licença
+
+Distribuído sob a [licença MIT](LICENSE).
 
 ---
 
